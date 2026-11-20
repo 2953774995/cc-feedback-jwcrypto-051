@@ -1,0 +1,5 @@
+来源仓库：https://github.com/latchset/jwcrypto
+冻结 commit：b4e8d9f5f4925a9ad0a699b1e432deea8da0890d
+许可证：LGPL-3.0
+导入日期：2026-11-20
+说明：本目录为评测底座，已剥离上游 git 历史，仅保留代码快照。
