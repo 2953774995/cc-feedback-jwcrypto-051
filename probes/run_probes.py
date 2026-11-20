@@ -34,13 +34,13 @@ def tok(claims=None, key=None, alg="HS256"):
     body.setdefault("aud", "gateway")
     body.setdefault("iat", NOW - 60)
     body.setdefault("exp", NOW + 3600)
-    return JWT(header={"alg": alg, "typ": "JWT"}, claims=json.dumps(body)).make_signed(k) \\
+    return JWT(header={"alg": alg, "typ": "JWT"}, claims=json.dumps(body)).make_signed_token(k) \
         if False else _tok(k, body, alg)
 
 def _tok(k, body, alg):
     from jwcrypto.jwt import JWT
     t = JWT(header={"alg": alg, "typ": "JWT"}, claims=json.dumps(body))
-    t.make_signed(k)
+    t.make_signed_token(k)
     return t.serialize()
 
 def key():
