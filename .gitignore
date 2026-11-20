@@ -1,10 +1,7 @@
-build/
-dist/
+.venv/
+__pycache__/
 *.pyc
-*.pyo
-cscope.out
-.tox
-.coverage
-*.egg-info
-env
-*.swp
+evidence/
+dist/
+build/
+*.egg-info/
